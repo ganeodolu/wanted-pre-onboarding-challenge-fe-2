@@ -6,7 +6,7 @@
 
 |Class|Global|
 |------------|-------------|
-|<img src="https://user-images.githubusercontent.com/52700427/188369048-15c8e1f6-cc24-4137-a205-934bf912d732.jpg" width="300">|<img src="https://user-images.githubusercontent.com/52700427/188369071-3f89649f-eac8-4fb4-81bd-9d905dda800e.jpg" width="300">|
+|<img src="https://user-images.githubusercontent.com/52700427/189060022-e976c9b1-2eb7-4769-af4c-32aa27787afc.png" width="300">|<img src="https://user-images.githubusercontent.com/52700427/189060212-e077496e-876e-4a9c-afb0-6f40026005aa.png" width="300">|
 
 
 ## 설치 환경설정 및 실행방법
@@ -27,13 +27,15 @@ yarn docs
 
 ### **필수 요구사항**
 
-> 아래의 Todo 앱 요구사항을 참고하여
-> 
-- 필요한 데이터를 모두 모델링한다.
+1. 첫번째 요구사항
+- 아래의 Todo 앱 요구사항을 참고하여 필요한 데이터를 모두 모델링한다.
 - 사용되는 모든 함수를 `선언부만` 만든다.
     - 함수 및 클래스의 내부는 구현하지 않습니다.
 - `JSDoc`을 활용해 문서화한다.
 - `GitHub Page`를 활용해 `JSDoc` 정적 페이지를 배포한다.
+
+2. 두번째 요구사항
+- 선언부뿐 아니라 내부도 구현한다.
 
 ### **Todo**
 

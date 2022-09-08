@@ -9,10 +9,6 @@ class TodoApp {
 		this.todolist = todolist;
 	}
 
-	// CREATE
-	// 할 일을 추가할 수 있다.
-	// 내용없이 추가할 수 없다.
-
 	/**
 	 * 할일 생성하기
 	 * @param {Todo} newTodo - 새로운 할일
@@ -23,10 +19,6 @@ class TodoApp {
 		this.todolist = [newTodo, ...this.todolist];
 		return newTodo;
 	}
-
-	// READ
-	// 모든 할 일을 조회할 수 있다.
-	// ID를 기반으로 특정 할 일을 조회할 수 있다.
 
 	/**
 	 * 할일 모두 조회하기
@@ -46,10 +38,6 @@ class TodoApp {
 	readById(id) {
 		return this.todolist.filter((todo) => todo.id === id);
 	}
-
-	// UPDATE
-	// ID를 제외한 모든 속성을 수정할 수 있다.
-	// 특정 할 일의 특정 태그를 수정할 수 있다.
 
 	/**
 	 * 할일 수정하기
@@ -89,12 +77,6 @@ class TodoApp {
 
 		return this.todolist[newIndex];
 	}
-	// DELETE
-	// ID를 기반으로 특정 할 일을 삭제할 수 있다.
-	// 모든 할 일을 제거할 수 있다.
-
-	// 특정 할 일의 특정 태그를 삭제할 수 있다.
-	// 특정 할 일의 모든 태그를 제거할 수 있다.
 
 	/**
 	 * 할일 모두 삭제하기
@@ -108,7 +90,7 @@ class TodoApp {
 	}
 
 	/**
-	 * 할일 삭제하기
+	 * 할일 아이디별 삭제하기
 	 * @param {string} id - 해당 아이디의 할일 삭제
 	 * @return {boolean} - 삭제 성공 유무
 	 */
@@ -122,7 +104,7 @@ class TodoApp {
 	}
 
 	/**
-	 * 할일 태그 삭제하기
+	 * 아이디별 할일 태그 삭제하기
 	 * @param {string} id - 삭제할 태그의 ID
 	 * @param {string} oldTag - 삭제할 태그
 	 * @return {boolean} - 삭제 성공 유무
@@ -140,7 +122,7 @@ class TodoApp {
 	}
 
 	/**
-	 * 할일 태그 전부 삭제하기
+	 * 아이디별 할일 태그 전부 삭제하기
 	 * @param {string} id - 삭제할 태그의 ID
 	 * @return {boolean} - 삭제 성공 유무
 	 */
@@ -154,14 +136,6 @@ class TodoApp {
 		return true;
 	}
 }
-
-// Todo {
-//   아이디(required),
-//   내용(required),
-//   완료여부(required),
-//   카테고리(required),
-//   태그들(optional),
-// }
 
 /**
  * Todo 정의

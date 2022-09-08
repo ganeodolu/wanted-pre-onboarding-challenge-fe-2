@@ -97,24 +97,37 @@ class TodoApp {
 	// 특정 할 일의 모든 태그를 제거할 수 있다.
 
 	/**
-	 * 할일 삭제하기
-	 * @param {string} [id] - 아이디가 없으면 모든 할일 제거, 아이디가 있으면 해당 아이디의 할일 삭제
+	 * 할일 모두 삭제하기
 	 * @return {boolean} - 삭제 성공 유무
 	 */
 
-	delete(id) {
+	deleteAll(){
+		this.todolist = [];
+
+		return true
+	}
+
+		/**
+	 * 할일 삭제하기
+	 * @param {string} id - 해당 아이디의 할일 삭제
+	 * @return {boolean} - 삭제 성공 유무
+	 */
+
+	deleteById(id) {
 		const newTodolist = [...this.todolist];
 		const newIndex = newTodolist.findIndex((todo) => todo.id === id);
 		this.todolist = [...newTodolist.splice(newIndex, 1)];
 
 		return true;
 	}
+
 	/**
 	 * 할일 태그 삭제하기
 	 * @param {string} id - 삭제할 태그의 ID
 	 * @param {string} [tag] - 삭제할 태그. 없으면 모든 태그 삭제, 있으면 해당 태그 삭제
 	 * @return {boolean} - 삭제 성공 유무
 	 */
+
 	deleteTag(id, oldTag) {
 		const newTodolist = [...this.todolist];
 		const newIndex = newTodolist.findIndex((todo) => todo.id === id);

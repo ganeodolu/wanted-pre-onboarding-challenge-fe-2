@@ -1,12 +1,19 @@
 /**
  * Todo 앱
  * @constructor
- * @param {Todo[]} todolist - 할일 목록
+ * @param {Todo[]} todoList - 할일 목록
  */
+interface Todo {
+	id: string,
+	content: string,
+	isCompleted: boolean,
+	category: string,
+	tag?: string[] 
+}
 
 class TodoApp {
-	constructor(todolist) {
-		this.todolist = todolist;
+	constructor({todoList} : { todoList: Todo[]}) {
+		this.todoList = todoList;
 	}
 
 	/**
@@ -16,7 +23,7 @@ class TodoApp {
 	 */
 
 	create(newTodo) {
-		this.todolist = [newTodo, ...this.todolist];
+		this.todoList = [newTodo, ...this.todoList];
 		return newTodo;
 	}
 
@@ -26,7 +33,7 @@ class TodoApp {
 	 */
 
 	readAll() {
-		return this.todolist;
+		return this.todoList;
 	}
 
 	/**
@@ -36,7 +43,7 @@ class TodoApp {
 	 */
 
 	readById(id) {
-		return this.todolist.filter((todo) => todo.id === id);
+		return this.todoList.find((todo) => todo.id === id);
 	}
 
 	/**
@@ -48,12 +55,12 @@ class TodoApp {
 	 */
 
 	updateById(id, key, value) {
-		const newTodolist = [...this.todolist];
-		const newIndex = newTodolist.findIndex((todo) => todo.id === id);
-		newTodolist[newIndex][key] = value;
-		this.todolist = [...newTodolist];
+		const newTodoList = [...this.todoList];
+		const newIndex = newTodoList.findIndex((todo) => todo.id === id);
+		newTodoList[newIndex][key] = value;
+		this.todoList = [...newTodoList];
 
-		return this.todolist[newIndex];
+		return this.todoList[newIndex];
 	}
 
 	/**
@@ -65,17 +72,17 @@ class TodoApp {
 	 */
 
 	updateTagById(id, oldTag, newTag) {
-		const newTodolist = [...this.todolist];
-		const newIndex = newTodolist.findIndex((todo) => todo.id === id);
-		const newTagIndex = newTodolist[newIndex][tag].findIndex(
+		const newTodoList = [...this.todoList];
+		const newIndex = newTodoList.findIndex((todo) => todo.id === id);
+		const newTagIndex = newTodoList[newIndex][tag].findIndex(
 			(text) => text === oldTag
 		);
-		newTodolist[newIndex][tag][newTagIndex] = newTag;
-		const tagSet = new Set(newTodolist[newIndex][tag][newTagIndex]);
-		newTodolist[newIndex][tag][newTagIndex] = [...tagSet];
-		this.todolist = [...newTodolist];
+		newTodoList[newIndex][tag][newTagIndex] = newTag;
+		const tagSet = new Set(newTodoList[newIndex][tag][newTagIndex]);
+		newTodoList[newIndex][tag][newTagIndex] = [...tagSet];
+		this.todoList = [...newTodoList];
 
-		return this.todolist[newIndex];
+		return this.todoList[newIndex];
 	}
 
 	/**
@@ -84,7 +91,7 @@ class TodoApp {
 	 */
 
 	deleteAll() {
-		this.todolist = [];
+		this.todoList = [];
 
 		return true;
 	}
@@ -96,9 +103,9 @@ class TodoApp {
 	 */
 
 	deleteById(id) {
-		const newTodolist = [...this.todolist];
-		const newIndex = newTodolist.findIndex((todo) => todo.id === id);
-		this.todolist = [...newTodolist.splice(newIndex, 1)];
+		const newTodoList = [...this.todoList];
+		const newIndex = newTodoList.findIndex((todo) => todo.id === id);
+		this.todoList = [...newTodoList.splice(newIndex, 1)];
 
 		return true;
 	}
@@ -111,12 +118,12 @@ class TodoApp {
 	 */
 
 	deleteTag(id, oldTag) {
-		const newTodolist = [...this.todolist];
-		const newIndex = newTodolist.findIndex((todo) => todo.id === id);
-		const newTagIndex = newTodolist[newIndex][tag].findIndex(
+		const newTodoList = [...this.todoList];
+		const newIndex = newTodoList.findIndex((todo) => todo.id === id);
+		const newTagIndex = newTodoList[newIndex][tag].findIndex(
 			(text) => text === oldTag
 		);
-		this.todolist = [...newTodolist[newIndex][tag].splice(newTagIndex, 1)];
+		this.todoList = [...newTodoList[newIndex][tag].splice(newTagIndex, 1)];
 
 		return true;
 	}
@@ -128,10 +135,10 @@ class TodoApp {
 	 */
 
 	deleteTagAll(id) {
-		const newTodolist = [...this.todolist];
-		const newIndex = newTodolist.findIndex((todo) => todo.id === id);
-		newTodolist[newIndex][tag] = [];
-		this.todolist = [...newTodolist];
+		const newTodoList = [...this.todoList];
+		const newIndex = newTodoList.findIndex((todo) => todo.id === id);
+		newTodoList[newIndex][tag] = [];
+		this.todoList = [...newTodoList];
 
 		return true;
 	}
@@ -147,8 +154,8 @@ class TodoApp {
  * @property {string[]} [tags] - 태그들
  */
 
-const todoApp = new TodoApp([]);
-console.log(todoApp.todolist);
+const todoApp = new TodoApp({todoList: []});
+console.log(todoApp.todoList);
 todoApp.create({
 	id: 1,
 	content: "타입설계",
@@ -156,7 +163,7 @@ todoApp.create({
 	category: "TypeScript",
 	tags: ["필수"],
 });
-console.log(todoApp.todolist);
+console.log(todoApp.todoList);
 todoApp.create({
 	id: 2,
 	content: "타입선언",
@@ -164,5 +171,5 @@ todoApp.create({
 	category: "TypeScript",
 	tags: ["필수", " 교양"],
 });
-console.log(todoApp.todolist);
+console.log(todoApp.todoList);
 console.log(todoApp.readById(2));

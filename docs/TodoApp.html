@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>TodoApp<span class="signature">(todolist)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>TodoApp<span class="signature">(todoList)</span><span class="type-signature"></span></h2>
         
             <div class="class-description"><p>Todo 앱</p></div>
         
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="TodoApp"><span class="type-signature"></span>new TodoApp<span class="signature">(todolist)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="TodoApp"><span class="type-signature"></span>new TodoApp<span class="signature">(todoList)</span><span class="type-signature"></span></h4>
     
 
     
@@ -85,7 +85,7 @@
 
         <tr>
             
-                <td class="name"><code>todolist</code></td>
+                <td class="name"><code>todoList</code></td>
             
 
             <td class="type">
@@ -142,7 +142,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line7">line 7</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line9">line 9</a>
     </li></ul></dd>
     
 
@@ -198,7 +198,7 @@
     
 
     
-    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(newTodo)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
+    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(param)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
     
 
     
@@ -219,6 +219,48 @@
 
     <h5>Parameters:</h5>
     
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
 
 <table class="params">
     <thead>
@@ -265,6 +307,13 @@
     </tbody>
 </table>
 
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
 
 
 
@@ -299,7 +348,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line22">line 22</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -409,7 +458,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line104">line 104</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line92">line 92</a>
     </li></ul></dd>
     
 
@@ -469,7 +518,7 @@
     
 
     
-    <h4 class="name" id="deleteById"><span class="type-signature"></span>deleteById<span class="signature">(id)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <h4 class="name" id="deleteById"><span class="type-signature"></span>deleteById<span class="signature">(param)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
     
 
     
@@ -477,7 +526,7 @@
 
 
 <div class="description">
-    <p>할일 삭제하기</p>
+    <p>할일 아이디별 삭제하기</p>
 </div>
 
 
@@ -513,7 +562,49 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedId</code></td>
             
 
             <td class="type">
@@ -530,6 +621,13 @@
             
 
             <td class="description last"><p>해당 아이디의 할일 삭제</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -570,7 +668,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line116">line 116</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line105">line 105</a>
     </li></ul></dd>
     
 
@@ -630,7 +728,7 @@
     
 
     
-    <h4 class="name" id="deleteTag"><span class="type-signature"></span>deleteTag<span class="signature">(id, oldTag)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <h4 class="name" id="deleteTag"><span class="type-signature"></span>deleteTag<span class="signature">(param)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
     
 
     
@@ -638,7 +736,7 @@
 
 
 <div class="description">
-    <p>할일 태그 삭제하기</p>
+    <p>아이디별 할일 태그 삭제하기</p>
 </div>
 
 
@@ -674,7 +772,49 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedId</code></td>
             
 
             <td class="type">
@@ -720,6 +860,13 @@
     </tbody>
 </table>
 
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
 
 
 
@@ -754,7 +901,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line131">line 131</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line121">line 121</a>
     </li></ul></dd>
     
 
@@ -814,7 +961,7 @@
     
 
     
-    <h4 class="name" id="deleteTagAll"><span class="type-signature"></span>deleteTagAll<span class="signature">(id)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <h4 class="name" id="deleteTagAll"><span class="type-signature"></span>deleteTagAll<span class="signature">(param)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
     
 
     
@@ -822,7 +969,7 @@
 
 
 <div class="description">
-    <p>할일 태그 전부 삭제하기</p>
+    <p>아이디별 할일 태그 전부 삭제하기</p>
 </div>
 
 
@@ -858,7 +1005,49 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedId</code></td>
             
 
             <td class="type">
@@ -875,6 +1064,13 @@
             
 
             <td class="description last"><p>삭제할 태그의 ID</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -915,7 +1111,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line148">line 148</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line140">line 140</a>
     </li></ul></dd>
     
 
@@ -1027,7 +1223,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line36">line 36</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -1081,7 +1277,7 @@
     
 
     
-    <h4 class="name" id="readById"><span class="type-signature"></span>readById<span class="signature">(id)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
+    <h4 class="name" id="readById"><span class="type-signature"></span>readById<span class="signature">(param)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
     
 
     
@@ -1125,7 +1321,49 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedId</code></td>
             
 
             <td class="type">
@@ -1142,6 +1380,13 @@
             
 
             <td class="description last"><p>아이디가 없으면 모든 할일 조회, 아이디가 있으면 해당 아이디의 할일 조회</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -1182,7 +1427,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line46">line 46</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line42">line 42</a>
     </li></ul></dd>
     
 
@@ -1236,7 +1481,7 @@
     
 
     
-    <h4 class="name" id="updateById"><span class="type-signature"></span>updateById<span class="signature">(id, key, value)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
+    <h4 class="name" id="updateById"><span class="type-signature"></span>updateById<span class="signature">(param)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
     
 
     
@@ -1280,7 +1525,49 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedId</code></td>
             
 
             <td class="type">
@@ -1355,6 +1642,13 @@
     </tbody>
 </table>
 
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
 
 
 
@@ -1389,7 +1683,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line62">line 62</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -1443,7 +1737,7 @@
     
 
     
-    <h4 class="name" id="updateTagById"><span class="type-signature"></span>updateTagById<span class="signature">(id, oldTag, newTag)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
+    <h4 class="name" id="updateTagById"><span class="type-signature"></span>updateTagById<span class="signature">(param)</span><span class="type-signature"> &rarr; {<a href="global.html#Todo">Todo</a>}</span></h4>
     
 
     
@@ -1487,7 +1781,49 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>param</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>매개변수 객체</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>selectedId</code></td>
             
 
             <td class="type">
@@ -1556,6 +1892,13 @@
     </tbody>
 </table>
 
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
 
 
 
@@ -1590,7 +1933,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line79">line 79</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line73">line 73</a>
     </li></ul></dd>
     
 
@@ -1660,7 +2003,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Thu Sep 08 2022 19:12:16 GMT+0900 (대한민국 표준시)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Mon Sep 12 2022 18:53:19 GMT+0900 (대한민국 표준시)
 </footer>
 
 <script> prettyPrint(); </script>

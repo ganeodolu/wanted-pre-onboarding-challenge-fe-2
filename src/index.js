@@ -13,12 +13,11 @@ class TodoApp {
 	 * 할일 생성하기
 	 * @param {Object} param - 매개변수 객체
 	 * @param {Todo} param.newTodo - 새로운 할일
-	 * @return {Todo} 새로운 할일
 	 */
+	// 반환값 삭제 - 리뷰에서 한가지 기능만 구현 추천
 
 	create({ newTodo }) {
 		this.todoList = [newTodo, ...this.todoList];
-		return newTodo;
 	}
 
 	/**
@@ -33,7 +32,7 @@ class TodoApp {
 	/**
 	 * 할일 아이디별 조회하기
 	 * @param {Object} param - 매개변수 객체
-	 * @param {string} param.selectedId - 아이디가 없으면 모든 할일 조회, 아이디가 있으면 해당 아이디의 할일 조회
+	 * @param {string} param.selectedId - 해당 아이디의 할일 조회
 	 * @return {Todo}
 	 */
 
@@ -154,23 +153,3 @@ class TodoApp {
  * @property {string} category - 카테고리
  * @property {string[]} [tags] - 태그들
  */
-
-// const todoApp = new TodoApp({todoList: []});
-// console.log(todoApp.todoList);
-// todoApp.create({
-// 	id: 1,
-// 	content: "타입설계",
-// 	isCompleted: false,
-// 	category: "TypeScript",
-// 	tags: ["필수"],
-// });
-// console.log(todoApp.todoList);
-// todoApp.create({
-// 	id: 2,
-// 	content: "타입선언",
-// 	isCompleted: false,
-// 	category: "TypeScript",
-// 	tags: ["필수", " 교양"],
-// });
-// console.log(todoApp.todoList);
-// console.log(todoApp.readById(2));

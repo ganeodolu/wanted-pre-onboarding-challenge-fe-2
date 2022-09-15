@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2015",
     "target": "ES6",
     "sourceMap": true,
     "experimentalDecorators": true,
-    "outDir": "build",
+    "outDir": "dist",
     "watch": true,
   },
+  "typeRoots": [
+    "@types/"
+  ],
   "moduleResolution": "node",
   "exclude": [
     "node_modules",

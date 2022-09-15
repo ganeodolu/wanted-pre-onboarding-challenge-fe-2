@@ -2,9 +2,11 @@
 	"name": "jsdoc-boilerplate",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "index.jsdoc.js",
 	"scripts": {
-		"docs": "jsdoc -c jsdoc.json"
+		"docs": "jsdoc -c jsdoc.json",
+		"build": "tsc --build",
+  	"clean": "tsc --build --clean"
 	},
 	"devDependencies": {
 		"jsdoc": "^3.6.11",
